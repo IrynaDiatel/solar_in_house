@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar In House — Сонячні електростанції під ключ</title>
+<meta name="description" content="Проєктуємо, встановлюємо та обслуговуємо сонячні електростанції по всій Україні. Економія на електроенергії та енергетична незалежність.">
+<meta property="og:title" content="Solar In House — Сонячні електростанції під ключ">
+<meta property="og:description" content="Сонячні електростанції для дому та бізнесу по всій Україні">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #003B8F;
+    --blue: #0A6EFF;
+    --blue-light: #4A90FF;
+    --green: #4CAF50;
+    --green-light: #8BC34A;
+    --orange: #FFA726;
+    --orange-dark: #F57C00;
+    --white: #ffffff;
+    --gray-50: #F8FAFC;
+    --gray-100: #F1F5F9;
+    --gray-200: #E2E8F0;
+    --gray-400: #94A3B8;
+    --gray-600: #475569;
+    --gray-800: #1E293B;
+    --gray-900: #0F172A;
+    --font: 'Inter', sans-serif;
+    --font-display: 'Manrope', sans-serif;
+    --radius: 12px;
+    --radius-lg: 20px;
+    --shadow: 0 4px 24px rgba(0,59,143,0.08);
+    --shadow-lg: 0 8px 40px rgba(0,59,143,0.14);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font);
+    color: var(--gray-800);
+    background: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--gray-200);
+    padding: 0 2rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .nav-logo-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-logo-text {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 1.1;
+  }
+
+  .nav-logo-text span:first-child { color: var(--navy); }
+  .nav-logo-text span:last-child { color: var(--green); display: block; font-size: 0.85rem; }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--gray-600);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--blue); }
+
+  .nav-cta {
+    background: var(--blue);
+    color: white !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--navy) !important; color: white !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--gray-900) 0%, var(--navy) 50%, #0A3D7A 100%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 2rem 80px;
+  }
+
+  .hero-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(10,110,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(10,110,255,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,167,38,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-glow-2 {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(76,175,80,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,167,38,0.15);
+    border: 1px solid rgba(255,167,38,0.3);
+    color: var(--orange);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    color: white;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 .highlight {
+    color: var(--orange);
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--orange);
+    color: white;
+    padding: 0.85rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); }
+
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    padding: 0.85rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .hero-stat {
+    border-left: 2px solid rgba(255,167,38,0.4);
+    padding-left: 1rem;
+  }
+
+  .hero-stat-num {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1;
+  }
+
+  .hero-stat-label {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: 4px;
+  }
+
+  /* Solar panel illustration */
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-house-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    width: 100%;
+    max-width: 420px;
+    backdrop-filter: blur(8px);
+  }
+
+  .solar-svg-wrapper {
+    width: 100%;
+    aspect-ratio: 4/3;
+  }
+
+  .live-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(76,175,80,0.15);
+    border: 1px solid rgba(76,175,80,0.3);
+    color: #66BB6A;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .live-dot {
+    width: 8px;
+    height: 8px;
+    background: #66BB6A;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .power-reading {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 0.5rem 0;
+  }
+
+  .power-label {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .power-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .power-item {
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 0.75rem;
+  }
+
+  .power-item-val {
+    font-weight: 700;
+    color: white;
+    font-size: 1.1rem;
+  }
+
+  .power-item-lab {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+    margin-top: 2px;
+  }
+
+  /* SECTION COMMON */
+  section {
+    padding: 6rem 2rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: var(--gray-900);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .section-sub {
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    max-width: 560px;
+    line-height: 1.7;
+  }
+
+  .section-header {
+    margin-bottom: 3.5rem;
+  }
+
+  /* ADVANTAGES */
+  .advantages {
+    background: var(--gray-50);
+  }
+
+  .advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .adv-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border: 1px solid var(--gray-200);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .adv-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .adv-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    font-size: 1.4rem;
+  }
+
+  .adv-icon-blue { background: #E6F1FF; }
+  .adv-icon-green { background: #E8F5E9; }
+  .adv-icon-orange { background: #FFF3E0; }
+
+  .adv-title {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+  }
+
+  .adv-desc {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    line-height: 1.6;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .service-header {
+    padding: 1.75rem 1.75rem 1.25rem;
+    border-bottom: 1px solid var(--gray-100);
+  }
+
+  .service-icon-bg {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-icon-bg-navy { background: #E6F1FF; }
+  .service-icon-bg-green { background: #E8F5E9; }
+  .service-icon-bg-orange { background: #FFF3E0; }
+
+  .service-title {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 0.4rem;
+  }
+
+  .service-desc {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+  }
+
+  .service-list {
+    padding: 1.25rem 1.75rem 1.75rem;
+    list-style: none;
+  }
+
+  .service-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--gray-700);
+    padding: 0.45rem 0;
+    border-bottom: 1px solid var(--gray-100);
+  }
+
+  .service-list li:last-child { border: none; }
+
+  .check-icon {
+    width: 20px;
+    height: 20px;
+    background: var(--green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+
+  /* CALCULATOR */
+  .calculator {
+    background: linear-gradient(135deg, var(--navy) 0%, #0A3D7A 100%);
+  }
+
+  .calc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .calc-form {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    backdrop-filter: blur(8px);
+  }
+
+  .calc-title-white {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    font-weight: 800;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .calc-sub-white {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-input, .form-select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    color: white;
+    font-size: 0.95rem;
+    font-family: var(--font);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-input:focus, .form-select:focus {
+    border-color: var(--blue-light);
+  }
+
+  .form-select option { background: var(--navy); color: white; }
+  .form-input::placeholder { color: rgba(255,255,255,0.3); }
+
+  .calc-result {
+    display: none;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(76,175,80,0.1);
+    border: 1px solid rgba(76,175,80,0.25);
+    border-radius: var(--radius);
+  }
+
+  .calc-result.visible { display: block; }
+
+  .result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .result-item {
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  .result-val {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--orange);
+    margin-bottom: 4px;
+  }
+
+  .result-lab {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* STEPS */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    position: relative;
+  }
+
+  .step-card {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+  }
+
+  .step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .step-num {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--blue), var(--navy));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .step-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+  }
+
+  .step-desc {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    line-height: 1.6;
+  }
+
+  /* PROJECTS */
+  .projects { background: var(--gray-50); }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .project-img {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #1a3a6b 0%, #2d5aa0 50%, #1e4080 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-info {
+    padding: 1.5rem;
+  }
+
+  .project-power {
+    display: inline-block;
+    background: #E8F5E9;
+    color: #2E7D32;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.3rem 0.75rem;
+    border-radius: 100px;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-city {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 0.35rem;
+  }
+
+  .project-economy {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+  }
+
+  .project-economy strong { color: var(--green); }
+
+  /* TESTIMONIALS */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border: 1px solid var(--gray-200);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .stars {
+    color: var(--orange);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.9rem;
+    color: var(--gray-700);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--gray-900);
+  }
+
+  .author-city {
+    font-size: 0.8rem;
+    color: var(--gray-400);
+  }
+
+  /* FAQ */
+  .faq { background: var(--gray-50); }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .faq-item {
+    background: white;
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-200);
+    overflow: hidden;
+  }
+
+  .faq-q {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    gap: 12px;
+  }
+
+  .faq-q:hover { color: var(--blue); }
+
+  .faq-arrow {
+    font-size: 1.2rem;
+    color: var(--gray-400);
+    flex-shrink: 0;
+    transition: transform 0.25s;
+  }
+
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+
+  .faq-a {
+    display: none;
+    padding: 0 1.5rem 1.25rem;
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+
+  .faq-item.open .faq-a { display: block; }
+
+  /* CONTACT */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-form {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow);
+  }
+
+  .contact-input, .contact-textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 10px;
+    font-family: var(--font);
+    font-size: 0.95rem;
+    color: var(--gray-900);
+    background: var(--gray-50);
+    outline: none;
+    transition: border-color 0.2s;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .contact-input:focus, .contact-textarea:focus {
+    border-color: var(--blue);
+    background: white;
+  }
+
+  .contact-input::placeholder, .contact-textarea::placeholder { color: var(--gray-400); }
+
+  .contact-textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .info-icon {
+    width: 48px;
+    height: 48px;
+    background: #E6F1FF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .info-label {
+    font-size: 0.8rem;
+    color: var(--gray-400);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .info-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-top: 2px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--gray-900);
+    color: rgba(255,255,255,0.6);
+    padding: 4rem 2rem 2rem;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-brand-name {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .footer-desc {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    max-width: 280px;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .social-link {
+    width: 38px;
+    height: 38px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgba(255,255,255,0.6);
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .social-link:hover { background: var(--blue); color: white; }
+
+  .footer-col-title {
+    font-weight: 700;
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.875rem;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: white; }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
+  }
+
+  .footer-legal {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .footer-legal a {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-legal a:hover { color: white; }
+
+  /* SUCCESS MSG */
+  .form-success {
+    display: none;
+    background: #E8F5E9;
+    border: 1px solid #A5D6A7;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    color: #2E7D32;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero-inner, .calc-grid, .contact-grid {
+      grid-template-columns: 1fr;
+    }
+    .services-grid, .steps-grid, .projects-grid, .testimonials-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+    .nav-links { display: none; }
+    .hero-visual { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .services-grid, .steps-grid, .projects-grid, .testimonials-grid, .advantages-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    section { padding: 4rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="20" fill="#003B8F"/>
+      <path d="M20 8 L8 22 H14 V32 H26 V22 H32 Z" fill="#4A90FF"/>
+      <path d="M15 22 H25 V30 H15 Z" fill="#003B8F"/>
+      <rect x="16" y="23" width="3" height="3" fill="#8BC34A" opacity="0.9"/>
+      <circle cx="20" cy="12" r="3" fill="#FFA726"/>
+      <line x1="20" y1="7" x2="20" y2="5" stroke="#FFA726" stroke-width="1.5"/>
+      <line x1="25" y1="9" x2="27" y2="7" stroke="#FFA726" stroke-width="1.5"/>
+      <line x1="15" y1="9" x2="13" y2="7" stroke="#FFA726" stroke-width="1.5"/>
+    </svg>
+    <div class="nav-logo-text">
+      <span>SOLAR</span>
+      <span>IN HOUSE</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#advantages">Переваги</a></li>
+    <li><a href="#services">Послуги</a></li>
+    <li><a href="#calculator">Калькулятор</a></li>
+    <li><a href="#projects">Проєкти</a></li>
+    <li><a href="#contact" class="nav-cta">Консультація</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        ☀️ Сонячна енергія для України
+      </div>
+      <h1>
+        Сонячні електростанції під&nbsp;ключ для <span class="highlight">вашого дому</span> та бізнесу
+      </h1>
+      <p class="hero-sub">
+        Проєктуємо, встановлюємо та обслуговуємо сонячні електростанції по всій Україні. Допомагаємо заощаджувати на електроенергії та досягти енергетичної незалежності.
+      </p>
+      <div class="hero-buttons">
+        <a href="#calculator" class="btn-primary">Розрахувати вартість →</a>
+        <a href="#contact" class="btn-secondary">Безкоштовна консультація</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">500+</div>
+          <div class="hero-stat-label">Встановлених об'єктів</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">25 р.</div>
+          <div class="hero-stat-label">Гарантія на панелі</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">5–7 р.</div>
+          <div class="hero-stat-label">Термін окупності</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-house-card">
+        <div class="live-pill">
+          <div class="live-dot"></div>
+          Виробляє зараз
+        </div>
+        <div class="power-reading">8.4 кВт</div>
+        <div class="power-label">Поточна потужність</div>
+        <div style="margin-top: 1.5rem; width: 100%; height: 3px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
+          <div style="height: 100%; width: 70%; background: linear-gradient(90deg, #4CAF50, #8BC34A); border-radius: 2px;"></div>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:rgba(255,255,255,0.35); margin-top:6px;">
+          <span>0 кВт</span><span>12 кВт</span>
+        </div>
+        <div class="power-grid">
+          <div class="power-item">
+            <div class="power-item-val" style="color: #8BC34A;">42.1 кВт·г</div>
+            <div class="power-item-lab">Вироблено сьогодні</div>
+          </div>
+          <div class="power-item">
+            <div class="power-item-val" style="color: var(--orange);">₴ 168</div>
+            <div class="power-item-lab">Зекономлено сьогодні</div>
+          </div>
+          <div class="power-item">
+            <div class="power-item-val">12.4 кВт</div>
+            <div class="power-item-lab">Передано в мережу</div>
+          </div>
+          <div class="power-item">
+            <div class="power-item-val" style="color: #4A90FF;">98%</div>
+            <div class="power-item-lab">Ефективність системи</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section class="advantages" id="advantages">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Наші переваги</div>
+      <h2 class="section-title">Чому обирають Solar In House</h2>
+      <p class="section-sub">Ми не просто продаємо обладнання — ми забезпечуємо повний цикл від проєктування до обслуговування.</p>
+    </div>
+    <div class="advantages-grid">
+      <div class="adv-card">
+        <div class="adv-icon adv-icon-orange">🛡️</div>
+        <div class="adv-title">Гарантія до 25 років</div>
+        <p class="adv-desc">Офіційна гарантія виробника на сонячні панелі до 25 років. Гарантія на інвертори та монтажні роботи.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon adv-icon-blue">🏆</div>
+        <div class="adv-title">Сертифіковане обладнання</div>
+        <p class="adv-desc">Працюємо лише з провідними виробниками: Longi, JinkoSolar, Growatt, Goodwe, SMA. Вся продукція сертифікована.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon adv-icon-green">🔑</div>
+        <div class="adv-title">Монтаж під ключ</div>
+        <p class="adv-desc">Від проєктування до підключення — ми беремо на себе всі технічні та документальні питання.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon adv-icon-orange">📈</div>
+        <div class="adv-title">Швидка окупність</div>
+        <p class="adv-desc">Середній термін окупності 5–7 років. Після цього — чиста економія протягом 20+ років.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon adv-icon-blue">👷</div>
+        <div class="adv-title">Власна команда монтажників</div>
+        <p class="adv-desc">Усі спеціалісти — штатні співробітники з відповідними допусками та досвідом від 5 років.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon adv-icon-green">💬</div>
+        <div class="adv-title">Безкоштовний прорахунок</div>
+        <p class="adv-desc">Виїзд спеціаліста, аналіз об'єкта та детальний розрахунок системи — абсолютно безкоштовно.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Послуги</div>
+      <h2 class="section-title">Повний спектр рішень</h2>
+      <p class="section-sub">Для приватних будинків, бізнесу та підприємств — індивідуальний підхід до кожного об'єкта.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-header">
+          <div class="service-icon-bg service-icon-bg-navy">🏡</div>
+          <div class="service-title">Для приватних будинків</div>
+          <div class="service-desc">Незалежність від зовнішньої мережі</div>
+        </div>
+        <ul class="service-list">
+          <li><span class="check-icon">✓</span> Сонячні електростанції</li>
+          <li><span class="check-icon">✓</span> Мережеві інвертори</li>
+          <li><span class="check-icon">✓</span> Акумуляторні системи</li>
+          <li><span class="check-icon">✓</span> Системи моніторингу</li>
+          <li><span class="check-icon">✓</span> Підключення до зеленого тарифу</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-header">
+          <div class="service-icon-bg service-icon-bg-green">🏢</div>
+          <div class="service-title">Для бізнесу</div>
+          <div class="service-desc">Скорочення витрат на електроенергію</div>
+        </div>
+        <ul class="service-list">
+          <li><span class="check-icon">✓</span> Комерційні СЕС</li>
+          <li><span class="check-icon">✓</span> Промислове енергозбереження</li>
+          <li><span class="check-icon">✓</span> Резервне живлення</li>
+          <li><span class="check-icon">✓</span> Системи накопичення</li>
+          <li><span class="check-icon">✓</span> Аналітика споживання</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-header">
+          <div class="service-icon-bg service-icon-bg-orange">🔧</div>
+          <div class="service-title">Монтаж та сервіс</div>
+          <div class="service-desc">Від ідеї до стабільної роботи</div>
+        </div>
+        <ul class="service-list">
+          <li><span class="check-icon">✓</span> Проєктування систем</li>
+          <li><span class="check-icon">✓</span> Монтажні роботи</li>
+          <li><span class="check-icon">✓</span> Пусконалагоджувальні роботи</li>
+          <li><span class="check-icon">✓</span> Технічне обслуговування</li>
+          <li><span class="check-icon">✓</span> Гарантійний ремонт</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calculator" id="calculator">
+  <div class="container">
+    <div class="calc-grid">
+      <div>
+        <div class="section-eyebrow" style="color: rgba(255,167,38,0.9);">Онлайн-калькулятор</div>
+        <h2 class="calc-title-white">Розрахуйте економію за лічені секунди</h2>
+        <p class="calc-sub-white">Введіть параметри вашого об'єкта і дізнайтеся рекомендовану потужність станції, орієнтовну вартість та прогноз економії.</p>
+
+        <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 48px; height: 48px; background: rgba(255,167,38,0.15); border: 1px solid rgba(255,167,38,0.25); border-radius: 12px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">⚡</div>
+            <div>
+              <div style="color:white; font-weight:600; font-size:0.9rem;">Аналіз рахунків</div>
+              <div style="color:rgba(255,255,255,0.5); font-size:0.8rem; margin-top:2px;">Розраховуємо на основі реального споживання</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 48px; height: 48px; background: rgba(76,175,80,0.15); border: 1px solid rgba(76,175,80,0.25); border-radius: 12px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">🗺️</div>
+            <div>
+              <div style="color:white; font-weight:600; font-size:0.9rem;">Регіональна сонячна карта</div>
+              <div style="color:rgba(255,255,255,0.5); font-size:0.8rem; margin-top:2px;">Враховуємо інсоляцію у вашому регіоні</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 48px; height: 48px; background: rgba(74,144,255,0.15); border: 1px solid rgba(74,144,255,0.25); border-radius: 12px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">📊</div>
+            <div>
+              <div style="color:white; font-weight:600; font-size:0.9rem;">Детальний звіт</div>
+              <div style="color:rgba(255,255,255,0.5); font-size:0.8rem; margin-top:2px;">Прогноз на 25 років з урахуванням тарифів</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="calc-form">
+        <h3 style="color:white; font-family:var(--font-display); font-size:1.15rem; font-weight:700; margin-bottom:1.5rem;">Розрахувати вартість</h3>
+        <div class="form-group">
+          <label class="form-label">Середнє споживання (кВт·г/місяць)</label>
+          <input type="number" class="form-input" id="consumption" placeholder="Наприклад: 400" min="50" max="5000">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Регіон</label>
+          <select class="form-select" id="region">
+            <option value="" disabled selected>Оберіть регіон</option>
+            <option value="1.1">Київська</option>
+            <option value="1.2">Харківська</option>
+            <option value="1.3">Дніпропетровська</option>
+            <option value="1.3">Одеська</option>
+            <option value="1.4">Запорізька</option>
+            <option value="1.1">Львівська</option>
+            <option value="1.2">Полтавська</option>
+            <option value="1.0">Чернівецька</option>
+            <option value="1.2">Вінницька</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Тип об'єкта</label>
+          <select class="form-select" id="objtype">
+            <option value="" disabled selected>Оберіть тип</option>
+            <option value="house">Приватний будинок</option>
+            <option value="biz">Підприємство / бізнес</option>
+            <option value="farm">Фермерство / агро</option>
+            <option value="apart">Багатоквартирний будинок</option>
+          </select>
+        </div>
+        <button class="btn-primary" onclick="calcSolar()" style="width:100%; justify-content:center;">
+          Розрахувати ↗
+        </button>
+        <div class="calc-result" id="calcResult">
+          <div style="color:rgba(255,255,255,0.7); font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:1rem;">Результати розрахунку</div>
+          <div class="result-grid">
+            <div class="result-item">
+              <div class="result-val" id="rPower">—</div>
+              <div class="result-lab">Рекомендована потужність</div>
+            </div>
+            <div class="result-item">
+              <div class="result-val" id="rCost">—</div>
+              <div class="result-lab">Орієнтовна вартість</div>
+            </div>
+            <div class="result-item">
+              <div class="result-val" id="rSavings">—</div>
+              <div class="result-lab">Економія за рік</div>
+            </div>
+            <div class="result-item">
+              <div class="result-val" id="rPayback">—</div>
+              <div class="result-lab">Термін окупності</div>
+            </div>
+          </div>
+          <a href="#contact" class="btn-primary" style="width:100%; justify-content:center; margin-top:1rem; display:flex;">
+            Отримати точний розрахунок →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section id="steps">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="section-eyebrow" style="text-align:center;">Як ми працюємо</div>
+      <h2 class="section-title" style="text-align:center;">Шлях від ідеї до зеленої енергії</h2>
+      <p class="section-sub" style="text-align:center; margin:0 auto;">Прозорий та зрозумілий процес — від першого дзвінка до запуску станції.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-title">Консультація</div>
+        <p class="step-desc">Безкоштовна консультація з нашим фахівцем. Аналізуємо рахунки за електроенергію та обговорюємо завдання.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-title">Виїзд спеціаліста</div>
+        <p class="step-desc">Проводимо виїзний огляд об'єкта, оцінюємо дах, орієнтацію будівлі та виміри для точного проєкту.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-title">Проєктування</div>
+        <p class="step-desc">Розробляємо індивідуальний проєкт системи, підбираємо обладнання та готуємо детальний кошторис.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-title">Монтаж</div>
+        <p class="step-desc">Власна бригада монтажників встановлює систему в строки від 1 до 5 робочих днів залежно від потужності.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">05</div>
+        <div class="step-title">Підключення</div>
+        <p class="step-desc">Пусконалагоджувальні роботи, тестування, підключення до мережі та налаштування моніторингу.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">06</div>
+        <div class="step-title">Сервіс</div>
+        <p class="step-desc">Подальший технічний супровід, щорічне технічне обслуговування та оперативна підтримка 24/7.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Наші роботи</div>
+      <h2 class="section-title">Виконані проєкти</h2>
+      <p class="section-sub">Більше 500 встановлених систем по всій Україні — від невеликих будинків до промислових підприємств.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-img">
+          <svg viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+            <defs>
+              <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0A2C6E"/>
+                <stop offset="100%" stop-color="#1a4fa0"/>
+              </linearGradient>
+            </defs>
+            <rect width="380" height="200" fill="url(#sky1)"/>
+            <circle cx="310" cy="40" r="28" fill="#FFA726" opacity="0.9"/>
+            <rect x="60" y="110" width="260" height="70" rx="4" fill="#1E3A6E"/>
+            <polygon points="60,110 190,50 320,110" fill="#2d5aa0"/>
+            <rect x="90" y="60" width="60" height="35" rx="3" fill="#1a3980" opacity="0.9"/>
+            <rect x="93" y="63" width="17" height="8" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="112" y="63" width="17" height="8" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="131" y="63" width="17" height="8" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="93" y="74" width="17" height="8" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="112" y="74" width="17" height="8" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="131" y="74" width="17" height="8" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="155" y="60" width="60" height="35" rx="3" fill="#1a3980" opacity="0.9"/>
+            <rect x="158" y="63" width="17" height="8" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="177" y="63" width="17" height="8" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="196" y="63" width="17" height="8" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="158" y="74" width="17" height="8" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="177" y="74" width="17" height="8" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="196" y="74" width="17" height="8" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="160" y="130" width="60" height="50" rx="3" fill="#1a3980"/>
+            <rect x="170" y="150" width="14" height="30" rx="2" fill="#4A90FF" opacity="0.6"/>
+            <rect x="50" y="170" width="280" height="30" fill="#0D2047"/>
+          </svg>
+        </div>
+        <div class="project-info">
+          <span class="project-power">10 кВт</span>
+          <div class="project-city">Київська область</div>
+          <div class="project-economy">Приватний будинок · <strong>₴ 42 000/рік</strong></div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">
+          <svg viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+            <rect width="380" height="200" fill="#0D1F42"/>
+            <circle cx="60" cy="45" r="22" fill="#FFA726" opacity="0.85"/>
+            <rect x="20" y="90" width="340" height="80" rx="4" fill="#1E3465"/>
+            <rect x="20" y="80" width="340" height="15" rx="2" fill="#2d4d8a"/>
+            <rect x="30" y="50" width="80" height="40" rx="3" fill="#1a3265" opacity="0.9"/>
+            <rect x="33" y="53" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="58" y="53" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="83" y="53" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="33" y="67" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="58" y="67" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="83" y="67" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="120" y="50" width="80" height="40" rx="3" fill="#1a3265" opacity="0.9"/>
+            <rect x="123" y="53" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="148" y="53" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="173" y="53" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="123" y="67" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="148" y="67" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="173" y="67" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="210" y="50" width="80" height="40" rx="3" fill="#1a3265" opacity="0.9"/>
+            <rect x="213" y="53" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="238" y="53" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="263" y="53" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="213" y="67" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="238" y="67" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="263" y="67" width="23" height="11" rx="1" fill="#4A90FF" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="project-info">
+          <span class="project-power">50 кВт</span>
+          <div class="project-city">Дніпро</div>
+          <div class="project-economy">Виробниче підприємство · <strong>₴ 210 000/рік</strong></div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">
+          <svg viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+            <rect width="380" height="200" fill="#0A1E40"/>
+            <circle cx="340" cy="35" r="25" fill="#FFA726" opacity="0.9"/>
+            <rect x="0" y="140" width="380" height="60" fill="#0D2040"/>
+            <polygon points="30,140 80,90 130,140" fill="#1E3A6E"/>
+            <polygon points="130,140 180,85 230,140" fill="#254580"/>
+            <rect x="250" y="95" width="110" height="45" rx="3" fill="#1E3A6E"/>
+            <rect x="255" y="100" width="30" height="13" rx="2" fill="#4A90FF" opacity="0.65"/>
+            <rect x="288" y="100" width="30" height="13" rx="2" fill="#4A90FF" opacity="0.65"/>
+            <rect x="321" y="100" width="30" height="13" rx="2" fill="#4A90FF" opacity="0.65"/>
+            <rect x="255" y="116" width="30" height="13" rx="2" fill="#4A90FF" opacity="0.65"/>
+            <rect x="288" y="116" width="30" height="13" rx="2" fill="#4A90FF" opacity="0.65"/>
+            <rect x="321" y="116" width="30" height="13" rx="2" fill="#4A90FF" opacity="0.65"/>
+            <rect x="50" y="95" width="60" height="30" rx="2" fill="#1a3265" opacity="0.8"/>
+            <rect x="54" y="99" width="15" height="8" rx="1" fill="#66BB6A" opacity="0.7"/>
+            <rect x="71" y="99" width="15" height="8" rx="1" fill="#66BB6A" opacity="0.7"/>
+            <rect x="88" y="99" width="15" height="8" rx="1" fill="#66BB6A" opacity="0.7"/>
+            <rect x="54" y="110" width="15" height="8" rx="1" fill="#66BB6A" opacity="0.7"/>
+            <rect x="71" y="110" width="15" height="8" rx="1" fill="#66BB6A" opacity="0.7"/>
+            <rect x="88" y="110" width="15" height="8" rx="1" fill="#66BB6A" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="project-info">
+          <span class="project-power">30 кВт</span>
+          <div class="project-city">Одеська область</div>
+          <div class="project-economy">Агрофермерство · <strong>₴ 126 000/рік</strong></div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">
+          <svg viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+            <rect width="380" height="200" fill="#0D1F42"/>
+            <circle cx="190" cy="30" r="20" fill="#FFA726" opacity="0.8"/>
+            <rect x="10" y="80" width="360" height="90" rx="4" fill="#1a3265"/>
+            <rect x="10" y="70" width="360" height="15" rx="2" fill="#254a8a"/>
+            <rect x="20" y="40" width="50" height="30" rx="2" fill="#1a3265" opacity="0.7"/>
+            <rect x="23" y="43" width="13" height="7" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="38" y="43" width="13" height="7" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="53" y="43" width="13" height="7" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="23" y="52" width="13" height="7" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="38" y="52" width="13" height="7" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="53" y="52" width="13" height="7" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="80" y="40" width="50" height="30" rx="2" fill="#1a3265" opacity="0.7"/>
+            <rect x="83" y="43" width="13" height="7" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="98" y="43" width="13" height="7" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="113" y="43" width="13" height="7" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="83" y="52" width="13" height="7" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="98" y="52" width="13" height="7" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="113" y="52" width="13" height="7" rx="1" fill="#4A90FF" opacity="0.6"/>
+            <rect x="250" y="40" width="50" height="30" rx="2" fill="#1a3265" opacity="0.7"/>
+            <rect x="253" y="43" width="13" height="7" rx="1" fill="#66BB6A" opacity="0.6"/>
+            <rect x="268" y="43" width="13" height="7" rx="1" fill="#66BB6A" opacity="0.6"/>
+            <rect x="283" y="43" width="13" height="7" rx="1" fill="#66BB6A" opacity="0.6"/>
+            <rect x="310" y="40" width="50" height="30" rx="2" fill="#1a3265" opacity="0.7"/>
+            <rect x="313" y="43" width="13" height="7" rx="1" fill="#66BB6A" opacity="0.6"/>
+            <rect x="328" y="43" width="13" height="7" rx="1" fill="#66BB6A" opacity="0.6"/>
+            <rect x="343" y="43" width="13" height="7" rx="1" fill="#66BB6A" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="project-info">
+          <span class="project-power">100 кВт</span>
+          <div class="project-city">Харків</div>
+          <div class="project-economy">Торговий центр · <strong>₴ 420 000/рік</strong></div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">
+          <svg viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+            <rect width="380" height="200" fill="#0A1C3E"/>
+            <circle cx="70" cy="38" r="20" fill="#FFA726" opacity="0.9"/>
+            <polygon points="80,145 200,75 320,145" fill="#1E3F7A"/>
+            <rect x="80" y="85" width="240" height="60" rx="2" fill="#1a3572" opacity="0.9"/>
+            <rect x="88" y="90" width="30" height="14" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="121" y="90" width="30" height="14" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="154" y="90" width="30" height="14" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="187" y="90" width="30" height="14" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="220" y="90" width="30" height="14" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="253" y="90" width="30" height="14" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="286" y="90" width="30" height="14" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="88" y="107" width="30" height="14" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="121" y="107" width="30" height="14" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="154" y="107" width="30" height="14" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="187" y="107" width="30" height="14" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="220" y="107" width="30" height="14" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="253" y="107" width="30" height="14" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="286" y="107" width="30" height="14" rx="1" fill="#4A90FF" opacity="0.7"/>
+            <rect x="150" y="145" width="80" height="30" rx="2" fill="#1a2e5a"/>
+            <rect x="0" y="170" width="380" height="30" fill="#0A1530"/>
+          </svg>
+        </div>
+        <div class="project-info">
+          <span class="project-power">15 кВт</span>
+          <div class="project-city">Львів</div>
+          <div class="project-economy">Приватний будинок · <strong>₴ 63 000/рік</strong></div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">
+          <svg viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+            <rect width="380" height="200" fill="#091830"/>
+            <circle cx="200" cy="40" r="30" fill="#FFA726" opacity="0.85"/>
+            <rect x="0" y="130" width="380" height="70" fill="#0D2040"/>
+            <rect x="50" y="70" width="130" height="60" rx="3" fill="#1E3A6E"/>
+            <rect x="200" y="70" width="130" height="60" rx="3" fill="#1E3A6E"/>
+            <rect x="55" y="75" width="35" height="18" rx="2" fill="#4A90FF" opacity="0.7"/>
+            <rect x="93" y="75" width="35" height="18" rx="2" fill="#4A90FF" opacity="0.7"/>
+            <rect x="131" y="75" width="44" height="18" rx="2" fill="#4A90FF" opacity="0.7"/>
+            <rect x="55" y="96" width="35" height="18" rx="2" fill="#4A90FF" opacity="0.7"/>
+            <rect x="93" y="96" width="35" height="18" rx="2" fill="#4A90FF" opacity="0.7"/>
+            <rect x="131" y="96" width="44" height="18" rx="2" fill="#4A90FF" opacity="0.7"/>
+            <rect x="205" y="75" width="35" height="18" rx="2" fill="#66BB6A" opacity="0.7"/>
+            <rect x="243" y="75" width="35" height="18" rx="2" fill="#66BB6A" opacity="0.7"/>
+            <rect x="281" y="75" width="44" height="18" rx="2" fill="#66BB6A" opacity="0.7"/>
+            <rect x="205" y="96" width="35" height="18" rx="2" fill="#66BB6A" opacity="0.7"/>
+            <rect x="243" y="96" width="35" height="18" rx="2" fill="#66BB6A" opacity="0.7"/>
+            <rect x="281" y="96" width="44" height="18" rx="2" fill="#66BB6A" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="project-info">
+          <span class="project-power">25 кВт</span>
+          <div class="project-city">Полтавська область</div>
+          <div class="project-economy">Готель · <strong>₴ 105 000/рік</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="section-eyebrow" style="text-align:center;">Відгуки</div>
+      <h2 class="section-title" style="text-align:center;">Що кажуть наші клієнти</h2>
+      <p class="section-sub" style="text-align:center; margin:0 auto;">Більше 500 задоволених клієнтів по всій Україні довіряють Solar In House.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">«Встановили систему на 10 кВт ще рік тому. Перший рік зекономили понад 40 000 грн на електроенергії. Команда Solar In House — дуже професійна, все зробили чисто та в строк.»</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #003B8F, #0A6EFF);">ОМ</div>
+          <div>
+            <div class="author-name">Олексій Марченко</div>
+            <div class="author-city">Київська область</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">«Для нашого підприємства встановили 50 кВт систему. Щомісяця економимо близько 17 000 грн. За такою окупністю навіть краще, ніж передбачали. Рекомендую всім!»</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #4CAF50, #8BC34A);">ТС</div>
+          <div>
+            <div class="author-name">Тетяна Сидоренко</div>
+            <div class="author-city">Дніпро</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">«Дуже задоволений якістю обслуговування та підходом до проєкту. Окупила систему за 6 років, а зараз просто отримую чисту економію. Приємно мати енергетичну незалежність.»</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #FFA726, #F57C00);">ВК</div>
+          <div>
+            <div class="author-name">Василь Коваль</div>
+            <div class="author-city">Львів</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="section-eyebrow" style="text-align:center;">FAQ</div>
+      <h2 class="section-title" style="text-align:center;">Поширені питання</h2>
+      <p class="section-sub" style="text-align:center; margin: 0 auto;">Відповіді на найчастіші запитання про сонячні електростанції.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Скільки коштує сонячна електростанція?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">Вартість залежить від потужності та типу системи. Мережева СЕС для приватного будинку потужністю 10 кВт коштує від 280 000 грн. Комерційні рішення розраховуються індивідуально. Ми надаємо безкоштовний розрахунок для кожного об'єкта.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          За який час окупається станція?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">Для приватних будинків середній термін окупності становить 5–7 років. Для бізнесу, де є великі обсяги споживання — 3–5 років. Після окупності ви отримуєте чисту економію протягом 20+ років.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Чи працює система взимку?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">Так, сонячні панелі працюють навіть у хмарну погоду та взимку. Ефективність знижується приблизно до 30–40% від літнього показника, однак навесні та влітку ця різниця компенсується підвищеною виробітком. Сніг легко прибирається або сходить самостійно під кутом даху.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Яка гарантія на обладнання?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">Сонячні панелі мають виробничу гарантію до 25 років та гарантію продуктивності 80% через 25 років. Інвертори — гарантія 5–10 років залежно від виробника. На монтажні роботи ми надаємо власну гарантію 2 роки.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Чи можна встановити акумулятори?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">Так, ми встановлюємо акумуляторні системи різної ємності — від 5 до 100+ кВт·г. Акумулятори дозволяють зберігати надлишкову енергію та використовувати її вночі або під час відключення мережі. Особливо актуально в умовах нестабільного електропостачання.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Чи є можливість продавати електроенергію?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">Так, в Україні діє механізм «зеленого тарифу» та нетмітерингу. Надлишки виробленої електроенергії можна передавати в мережу та отримувати компенсацію. Ми допомагаємо з усіма документами для підключення до відповідних програм.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Зв'язатися з нами</div>
+      <h2 class="section-title">Отримайте безкоштовну консультацію</h2>
+      <p class="section-sub">Залиште заявку і наш спеціаліст зв'яжеться з вами протягом 30 хвилин.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-form">
+        <h3 style="font-family:var(--font-display); font-size:1.1rem; font-weight:700; color:var(--gray-900); margin-bottom:1.5rem;">Залишити заявку</h3>
+        <input class="contact-input" type="text" id="cName" placeholder="Ваше ім'я">
+        <input class="contact-input" type="tel" id="cPhone" placeholder="Номер телефону">
+        <input class="contact-input" type="email" id="cEmail" placeholder="Email (необов'язково)">
+        <textarea class="contact-textarea" id="cComment" placeholder="Коментар або запитання"></textarea>
+        <button class="btn-primary" onclick="submitForm()" style="width:100%; justify-content:center;">
+          Надіслати заявку →
+        </button>
+        <div class="form-success" id="formSuccess">
+          ✅ Дякуємо! Ваша заявка прийнята. Ми зателефонуємо вам протягом 30 хвилин.
+        </div>
+        <p style="font-size:0.78rem; color:var(--gray-400); margin-top:0.75rem; text-align:center;">Надсилаючи форму, ви погоджуєтесь з Політикою конфіденційності</p>
+      </div>
+      <div class="contact-info">
+        <div style="font-family:var(--font-display); font-size:1.1rem; font-weight:700; color:var(--gray-900); margin-bottom:1.5rem;">Контактна інформація</div>
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div>
+            <div class="info-label">Телефон</div>
+            <div class="info-value">+38 (050) 123-45-67</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div>
+            <div class="info-label">Email</div>
+            <div class="info-value">info@solarinhouse.ua</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div>
+            <div class="info-label">Офіс</div>
+            <div class="info-value">м. Київ, вул. Хрещатик, 1</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">⏰</div>
+          <div>
+            <div class="info-label">Графік роботи</div>
+            <div class="info-value">Пн–Пт: 9:00–18:00</div>
+          </div>
+        </div>
+        <div style="margin-top:2rem; background:var(--gray-100); border-radius:var(--radius-lg); padding:1.5rem; text-align:center;">
+          <div style="font-size:2rem; margin-bottom:0.75rem;">🗺️</div>
+          <div style="font-size:0.875rem; color:var(--gray-600); margin-bottom:1rem;">Також працюємо по всій Україні — виїзд до будь-якого регіону</div>
+          <div style="display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center;">
+            <span style="background:white; border:1px solid var(--gray-200); border-radius:100px; font-size:0.75rem; padding:4px 12px; color:var(--gray-600);">Київ</span>
+            <span style="background:white; border:1px solid var(--gray-200); border-radius:100px; font-size:0.75rem; padding:4px 12px; color:var(--gray-600);">Харків</span>
+            <span style="background:white; border:1px solid var(--gray-200); border-radius:100px; font-size:0.75rem; padding:4px 12px; color:var(--gray-600);">Дніпро</span>
+            <span style="background:white; border:1px solid var(--gray-200); border-radius:100px; font-size:0.75rem; padding:4px 12px; color:var(--gray-600);">Одеса</span>
+            <span style="background:white; border:1px solid var(--gray-200); border-radius:100px; font-size:0.75rem; padding:4px 12px; color:var(--gray-600);">Львів</span>
+            <span style="background:white; border:1px solid var(--gray-200); border-radius:100px; font-size:0.75rem; padding:4px 12px; color:var(--gray-600);">Запоріжжя</span>
+            <span style="background:white; border:1px solid var(--gray-200); border-radius:100px; font-size:0.75rem; padding:4px 12px; color:var(--gray-600);">+всі регіони</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">
+          <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="20" fill="#003B8F"/>
+            <path d="M20 8 L8 22 H14 V32 H26 V22 H32 Z" fill="#4A90FF"/>
+            <circle cx="20" cy="13" r="3" fill="#FFA726"/>
+          </svg>
+          SOLAR IN HOUSE
+        </div>
+        <p class="footer-desc">Сонячні електростанції під ключ для приватних будинків та бізнесу по всій Україні. Від проєктування до обслуговування.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" title="Facebook">f</a>
+          <a href="#" class="social-link" title="Instagram">in</a>
+          <a href="#" class="social-link" title="Telegram">tg</a>
+          <a href="#" class="social-link" title="YouTube">▶</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Послуги</div>
+        <ul class="footer-links">
+          <li><a href="#">Для приватних будинків</a></li>
+          <li><a href="#">Для бізнесу</a></li>
+          <li><a href="#">Акумуляторні системи</a></li>
+          <li><a href="#">Зелений тариф</a></li>
+          <li><a href="#">Обслуговування</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Компанія</div>
+        <ul class="footer-links">
+          <li><a href="#">Про нас</a></li>
+          <li><a href="#">Наші проєкти</a></li>
+          <li><a href="#">Партнери</a></li>
+          <li><a href="#">Кар'єра</a></li>
+          <li><a href="#">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Контакти</div>
+        <ul class="footer-links">
+          <li><a href="tel:+380501234567">+38 (050) 123-45-67</a></li>
+          <li><a href="mailto:info@solarinhouse.ua">info@solarinhouse.ua</a></li>
+          <li><a href="#">м. Київ, вул. Хрещатик, 1</a></li>
+          <li><a href="#">Пн–Пт: 9:00–18:00</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Solar In House. Всі права захищені.</div>
+      <div class="footer-legal">
+        <a href="#">Політика конфіденційності</a>
+        <a href="#">Умови використання</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function calcSolar() {
+  const c = parseFloat(document.getElementById('consumption').value);
+  const r = parseFloat(document.getElementById('region').value);
+  const t = document.getElementById('objtype').value;
+  if (!c || !r || !t) {
+    alert('Будь ласка, заповніть всі поля.');
+    return;
+  }
+  const dailyAvg = c / 30;
+  const peakSun = 3.8 * r;
+  const efficiency = 0.8;
+  const power = Math.ceil(dailyAvg / (peakSun * efficiency) * 10) / 10;
+  const pricePerKw = t === 'biz' ? 32000 : 28000;
+  const cost = Math.round(power * pricePerKw / 1000) * 1000;
+  const yearlyKwh = power * peakSun * efficiency * 365;
+  const tariff = 4.32;
+  const savings = Math.round(yearlyKwh * tariff / 1000) * 1000;
+  const payback = Math.round((cost / savings) * 10) / 10;
+
+  document.getElementById('rPower').textContent = power.toFixed(1) + ' кВт';
+  document.getElementById('rCost').textContent = '₴ ' + cost.toLocaleString('uk-UA');
+  document.getElementById('rSavings').textContent = '₴ ' + savings.toLocaleString('uk-UA');
+  document.getElementById('rPayback').textContent = payback.toFixed(1) + ' р.';
+  document.getElementById('calcResult').classList.add('visible');
+}
+
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+function submitForm() {
+  const name = document.getElementById('cName').value.trim();
+  const phone = document.getElementById('cPhone').value.trim();
+  if (!name || !phone) {
+    alert("Будь ласка, введіть ім'я та номер телефону.");
+    return;
+  }
+  document.getElementById('formSuccess').style.display = 'block';
+  document.getElementById('cName').value = '';
+  document.getElementById('cPhone').value = '';
+  document.getElementById('cEmail').value = '';
+  document.getElementById('cComment').value = '';
+}
+</script>
+</body>
+</html>
