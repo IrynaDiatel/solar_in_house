@@ -1,0 +1,14 @@
+{
+  "name": "solar_in_house",
+  "version": "1.0.0",
+  "description": "Static website for Solar In House",
+  "private": true,
+  "scripts": {
+    "dev": "live-server --port=5500 --open=./index.html",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "png-to-ico": "^3.0.1"
+  }
+}
