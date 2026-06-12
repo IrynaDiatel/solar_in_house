@@ -12,35 +12,40 @@
 <meta name="robots" content="index, follow">
 <meta name="author" content="Solar In House">
 <link rel="stylesheet" href="css/style.css">
-<link rel="icon" href="assets/images/favicon.svg" type="image/svg">
-<link rel="shortcut icon" href="assets/images/favicon.svg" type="image/svg">
+<link rel="icon" href="images/favicon.svg?v=2" type="image/svg">
+<link rel="shortcut icon" href="images/favicon.svg?v=2" type="image/svg">
 <link rel="canonical" href="https://solarinhouse.ua/">
 
 <meta property="og:title" content="Solar In House — Сонячні електростанції під ключ">
 <meta property="og:description" content="Монтаж сонячних електростанцій для дому та бізнесу по всій Україні. Гарантія до 25 років.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://solarinhouse.ua/">
-<meta property="og:image" content="https://solarinhouse.ua/assets/images/og-image.jpg">
+<meta property="og:image" content="https://solarinhouse.ua/images/og-image.jpg">
 <meta property="og:locale" content="uk_UA">
 <meta property="og:site_name" content="Solar In House">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Solar In House — Сонячні електростанції під ключ">
 <meta name="twitter:description" content="Сонячні електростанції для дому та бізнесу по всій Україні.">
-<meta name="twitter:image" content="https://solarinhouse.ua/assets/images/og-image.jpg">
+<meta name="twitter:image" content="https://solarinhouse.ua/images/og-image.jpg">
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
-    <img src="assets/images/logo.png?v=2" alt="Solar In House" class="nav-logo-img" width="64" height="64">
+    <img src="images/logo.png?v=2" alt="Solar In House" class="nav-logo-img" width="64" height="64">
     <div class="nav-logo-text">
       <span>SOLAR</span>
       <span>IN HOUSE</span>
     </div>
   </a>
-  <ul class="nav-links">
+  <button class="nav-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="nav-menu">
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+  </button>
+  <ul class="nav-links" id="nav-menu">
     <li><a href="#advantages">Переваги</a></li>
     <li><a href="#services">Послуги</a></li>
     <li><a href="#projects">Проєкти</a></li>
@@ -473,7 +478,7 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- TESTIMONIALS DISABLED
 <section id="testimonials">
   <div class="container">
     <div class="section-header" style="text-align:center;">
@@ -518,6 +523,7 @@
     </div>
   </div>
 </section>
+-->
 
 <!-- FAQ -->
 <section class="faq" id="faq">
@@ -528,47 +534,51 @@
       <p class="section-sub" style="text-align:center; margin: 0 auto;">Відповіді на найчастіші запитання про сонячні електростанції.</p>
     </div>
     <div class="faq-grid">
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Скільки коштує сонячна електростанція?
-          <span class="faq-arrow">▾</span>
-        </button>
-        <div class="faq-a">Вартість залежить від потужності та типу системи. Мережева СЕС для приватного будинку потужністю 10 кВт коштує від 280 000 грн. Комерційні рішення розраховуються індивідуально. Ми надаємо безкоштовний розрахунок для кожного об'єкта.</div>
+      <div class="faq-col">
+        <div class="faq-item" style="order:1">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Скільки коштує сонячна електростанція?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">Вартість залежить від потужності та типу системи. Мережева СЕС для приватного будинку потужністю 10 кВт коштує від 280 000 грн. Комерційні рішення розраховуються індивідуально. Ми надаємо безкоштовний розрахунок для кожного об'єкта.</div>
+        </div>
+        <div class="faq-item" style="order:3">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Чи працює система взимку?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">Так, сонячні панелі працюють навіть у хмарну погоду та взимку. Ефективність знижується приблизно до 30–40% від літнього показника, однак навесні та влітку ця різниця компенсується підвищеною виробітком. Сніг легко прибирається або сходить самостійно під кутом даху.</div>
+        </div>
+        <div class="faq-item" style="order:5">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Чи можна встановити акумулятори?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">Так, ми встановлюємо акумуляторні системи різної ємності — від 5 до 100+ кВт·г. Акумулятори дозволяють зберігати надлишкову енергію та використовувати її вночі або під час відключення мережі. Особливо актуально в умовах нестабільного електропостачання.</div>
+        </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          За який час окупається станція?
-          <span class="faq-arrow">▾</span>
-        </button>
-        <div class="faq-a">Для приватних будинків середній термін окупності становить 5–7 років. Для бізнесу, де є великі обсяги споживання — 3–5 років. Після окупності ви отримуєте чисту економію протягом 20+ років.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Чи працює система взимку?
-          <span class="faq-arrow">▾</span>
-        </button>
-        <div class="faq-a">Так, сонячні панелі працюють навіть у хмарну погоду та взимку. Ефективність знижується приблизно до 30–40% від літнього показника, однак навесні та влітку ця різниця компенсується підвищеною виробітком. Сніг легко прибирається або сходить самостійно під кутом даху.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Яка гарантія на обладнання?
-          <span class="faq-arrow">▾</span>
-        </button>
-        <div class="faq-a">Сонячні панелі мають виробничу гарантію до 25 років та гарантію продуктивності 80% через 25 років. Інвертори — гарантія 5–10 років залежно від виробника. На монтажні роботи ми надаємо власну гарантію 2 роки.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Чи можна встановити акумулятори?
-          <span class="faq-arrow">▾</span>
-        </button>
-        <div class="faq-a">Так, ми встановлюємо акумуляторні системи різної ємності — від 5 до 100+ кВт·г. Акумулятори дозволяють зберігати надлишкову енергію та використовувати її вночі або під час відключення мережі. Особливо актуально в умовах нестабільного електропостачання.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Чи є можливість продавати електроенергію?
-          <span class="faq-arrow">▾</span>
-        </button>
-        <div class="faq-a">Так, в Україні діє механізм «зеленого тарифу» та нетмітерингу. Надлишки виробленої електроенергії можна передавати в мережу та отримувати компенсацію. Ми допомагаємо з усіма документами для підключення до відповідних програм.</div>
+      <div class="faq-col">
+        <div class="faq-item" style="order:2">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            За який час окупається станція?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">Для приватних будинків середній термін окупності становить 5–7 років. Для бізнесу, де є великі обсяги споживання — 3–5 років. Після окупності ви отримуєте чисту економію протягом 20+ років.</div>
+        </div>
+        <div class="faq-item" style="order:4">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Яка гарантія на обладнання?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">Сонячні панелі мають виробничу гарантію до 25 років та гарантію продуктивності 80% через 25 років. Інвертори — гарантія 5–10 років залежно від виробника. На монтажні роботи ми надаємо власну гарантію 2 роки.</div>
+        </div>
+        <div class="faq-item" style="order:6">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Чи є можливість продавати електроенергію?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">Так, в Україні діє механізм «зеленого тарифу» та нетмітерингу. Надлишки виробленої електроенергії можна передавати в мережу та отримувати компенсацію. Ми допомагаємо з усіма документами для підключення до відповідних програм.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -583,20 +593,26 @@
       <p class="section-sub" style="text-align:center; margin:0 auto;">Залиште заявку, і наш спеціаліст зв'яжеться з вами протягом 30 хвилин.</p>
     </div>
     <div class="contact-grid">
-      <div class="contact-form">
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/info@solarinhouse.ua" method="POST">
         <h3 style="font-family:var(--font-display); font-size:1.1rem; font-weight:700; color:var(--gray-900); margin-bottom:1.5rem;">Залишити заявку</h3>
-        <input class="contact-input" type="text" id="cName" placeholder="Ваше ім'я">
-        <input class="contact-input" type="tel" id="cPhone" placeholder="Номер телефону">
-        <input class="contact-input" type="email" id="cEmail" placeholder="Email (необов'язково)">
-        <textarea class="contact-textarea" id="cComment" placeholder="Коментар або запитання"></textarea>
-        <button class="btn-primary" onclick="submitForm()" style="width:100%; justify-content:center;">
+        <input type="hidden" name="_subject" value="Нова заявка з сайту Solar In House">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input class="contact-input" type="text" id="cName" name="name" placeholder="Ваше ім'я" required>
+        <input class="contact-input" type="tel" id="cPhone" name="phone" placeholder="Номер телефону" required>
+        <input class="contact-input" type="email" id="cEmail" name="email" placeholder="Email (необов'язково)">
+        <textarea class="contact-textarea" id="cComment" name="message" placeholder="Коментар або запитання"></textarea>
+        <button class="btn-primary" type="submit" id="contactSubmit" style="width:100%; justify-content:center;">
           Надіслати заявку →
         </button>
         <div class="form-success" id="formSuccess">
           ✅ Дякуємо! Ваша заявка прийнята. Ми зателефонуємо вам протягом 30 хвилин.
         </div>
+        <div class="form-error" id="formError">
+          Не вдалося надіслати заявку. Спробуйте ще раз або напишіть нам напряму в Telegram/Viber.
+        </div>
         <p style="font-size:0.78rem; color:var(--gray-400); margin-top:0.75rem; text-align:center;">Надсилаючи форму, ви погоджуєтесь з Політикою конфіденційності</p>
-      </div>
+      </form>
       <div class="contact-info">
         <div style="font-family:var(--font-display); font-size:1.1rem; font-weight:700; color:var(--gray-900); margin-bottom:1.5rem;">Контактна інформація</div>
 
@@ -677,10 +693,27 @@
         <div style="margin-top: 1.5rem; margin-bottom: 0.75rem;">
           <div style="font-weight: 700; font-size: 0.9rem; color: white; margin-bottom: 0.75rem;">Ми у соціальних мережах</div>
           <div class="social-links">
-            <a href="https://facebook.com" target="_blank" rel="noreferrer noopener" class="social-link" title="Facebook">F</a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer noopener" class="social-link" title="Instagram">in</a>
-            <a href="https://t.me/+380952464992" target="_blank" rel="noreferrer noopener" class="social-link" title="Telegram">tg</a>
-            <a href="viber://chat?number=%2B380952464992" target="_blank" rel="noreferrer noopener" class="social-link" title="Viber">vb</a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer noopener" class="social-link" title="Facebook" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15.1 8.1h2.2V4.3A28 28 0 0 0 14.1 4c-3.2 0-5.4 2-5.4 5.7V13H5.2v4.3h3.5V24H13v-6.7h3.4l.5-4.3H13V10c0-1.2.4-1.9 2.1-1.9Z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer noopener" class="social-link" title="Instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm8.7 1.7a1.35 1.35 0 1 1 0 2.7 1.35 1.35 0 0 1 0-2.7ZM12 7.3a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4Zm0 2a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Z"/>
+              </svg>
+            </a>
+            <a href="https://t.me/+380952464992" target="_blank" rel="noreferrer noopener" class="social-link" title="Telegram" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M16.9 7.5 5.8 11.8c-.8.3-.8.8-.2 1l2.9.9 1.1 3.3c.1.4.3.5.5.5.3 0 .4-.1.6-.3l1.5-1.5 3 2.2c.6.3 1 .2 1.1-.5l2-9.3c.2-.8-.3-1.1-1.4-.6Zm-7.9 6 6.8-4.3c.3-.2.6-.1.4.1l-5.8 5.2-.2 2.2-1.2-3.2Z"/>
+              </svg>
+            </a>
+            <a href="viber://chat?number=%2B380952464992" target="_blank" rel="noreferrer noopener" class="social-link" title="Viber" aria-label="Viber">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.2c4.9 0 8.1 2.8 8.1 7.5v3.2c0 4.7-3.2 7.5-8.1 7.5-.8 0-1.6-.1-2.3-.2L6 22.2c-.5.3-1.1 0-1.1-.7v-3.2a6.9 6.9 0 0 1-1-1.3A8 8 0 0 1 3 12.9V9.7c0-4.7 3.2-7.5 9-7.5Zm0 2C7.4 4.2 5 6.2 5 9.7v3.2c0 1.7.5 3 1.5 4.1l.4.4v2.2l2.3-1.4.4.1c.8.2 1.6.3 2.4.3 4.6 0 6.1-2.2 6.1-5.5V9.7c0-3.5-2.4-5.5-6.1-5.5Zm3.7 10.3c.4.2.6.6.4 1-.3.9-1.1 1.4-2 1.4-2.7 0-6-3.1-6-6 0-.9.5-1.7 1.4-2 .4-.1.8 0 1 .4l.7 1.4c.2.4.1.8-.2 1.1l-.4.4c.5 1.1 1.2 1.8 2.2 2.3l.5-.5c.3-.3.7-.4 1.1-.2l1.3.7Zm-2.2-7.3c2 .4 3.1 1.6 3.3 3.6.1.5-.2.8-.7.9-.4 0-.8-.3-.8-.7-.2-1.4-.8-2.1-2.1-2.4-.5-.1-.7-.5-.6-.9.1-.4.5-.6.9-.5Zm.1 2.3c.9.2 1.4.7 1.6 1.7.1.4-.2.8-.6.9-.4.1-.8-.2-.9-.6-.1-.3-.2-.4-.5-.5-.4-.1-.7-.5-.6-.9.1-.4.5-.7 1-.6Z"/>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
