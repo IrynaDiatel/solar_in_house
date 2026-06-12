@@ -43,7 +43,6 @@
   <ul class="nav-links">
     <li><a href="#advantages">Переваги</a></li>
     <li><a href="#services">Послуги</a></li>
-    <li><a href="#calculator">Калькулятор</a></li>
     <li><a href="#projects">Проєкти</a></li>
     <li><a href="#contact" class="nav-cta">Консультація</a></li>
   </ul>
@@ -214,102 +213,6 @@
           <li><span class="check-icon">✓</span> Технічне обслуговування</li>
           <li><span class="check-icon">✓</span> Гарантійний ремонт</li>
         </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CALCULATOR -->
-<section class="calculator" id="calculator">
-  <div class="container">
-    <div class="calc-grid">
-      <div>
-        <div class="section-eyebrow" style="color: rgba(255,167,38,0.9);">Онлайн-калькулятор</div>
-        <h2 class="calc-title-white">Розрахуйте економію за лічені секунди</h2>
-        <p class="calc-sub-white">Введіть параметри вашого об'єкта і дізнайтеся рекомендовану потужність станції, орієнтовну вартість та прогноз економії.</p>
-
-        <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;">
-          <div style="display: flex; align-items: center; gap: 1rem;">
-            <div style="width: 48px; height: 48px; background: rgba(255,167,38,0.15); border: 1px solid rgba(255,167,38,0.25); border-radius: 12px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">⚡</div>
-            <div>
-              <div style="color:white; font-weight:600; font-size:0.9rem;">Аналіз рахунків</div>
-              <div style="color:rgba(255,255,255,0.5); font-size:0.8rem; margin-top:2px;">Розраховуємо на основі реального споживання</div>
-            </div>
-          </div>
-          <div style="display: flex; align-items: center; gap: 1rem;">
-            <div style="width: 48px; height: 48px; background: rgba(76,175,80,0.15); border: 1px solid rgba(76,175,80,0.25); border-radius: 12px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">🗺️</div>
-            <div>
-              <div style="color:white; font-weight:600; font-size:0.9rem;">Регіональна сонячна карта</div>
-              <div style="color:rgba(255,255,255,0.5); font-size:0.8rem; margin-top:2px;">Враховуємо інсоляцію у вашому регіоні</div>
-            </div>
-          </div>
-          <div style="display: flex; align-items: center; gap: 1rem;">
-            <div style="width: 48px; height: 48px; background: rgba(74,144,255,0.15); border: 1px solid rgba(74,144,255,0.25); border-radius: 12px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">📊</div>
-            <div>
-              <div style="color:white; font-weight:600; font-size:0.9rem;">Детальний звіт</div>
-              <div style="color:rgba(255,255,255,0.5); font-size:0.8rem; margin-top:2px;">Прогноз на 25 років з урахуванням тарифів</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="calc-form">
-        <h3 style="color:white; font-family:var(--font-display); font-size:1.15rem; font-weight:700; margin-bottom:1.5rem;">Розрахувати вартість</h3>
-        <div class="form-group">
-          <label class="form-label">Середнє споживання (кВт·г/місяць)</label>
-          <input type="number" class="form-input" id="consumption" placeholder="Наприклад: 400" min="50" max="5000">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Регіон</label>
-          <select class="form-select" id="region">
-            <option value="" disabled selected>Оберіть регіон</option>
-            <option value="1.1">Київська</option>
-            <option value="1.2">Харківська</option>
-            <option value="1.3">Дніпропетровська</option>
-            <option value="1.3">Одеська</option>
-            <option value="1.4">Запорізька</option>
-            <option value="1.1">Львівська</option>
-            <option value="1.2">Полтавська</option>
-            <option value="1.0">Чернівецька</option>
-            <option value="1.2">Вінницька</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Тип об'єкта</label>
-          <select class="form-select" id="objtype">
-            <option value="" disabled selected>Оберіть тип</option>
-            <option value="house">Приватний будинок</option>
-            <option value="biz">Підприємство / бізнес</option>
-            <option value="farm">Фермерство / агро</option>
-            <option value="apart">Багатоквартирний будинок</option>
-          </select>
-        </div>
-        <button class="btn-primary" onclick="calcSolar()" style="width:100%; justify-content:center;">
-          Розрахувати ↗
-        </button>
-        <div class="calc-result" id="calcResult">
-          <div style="color:rgba(255,255,255,0.7); font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:1rem;">Результати розрахунку</div>
-          <div class="result-grid">
-            <div class="result-item">
-              <div class="result-val" id="rPower">—</div>
-              <div class="result-lab">Рекомендована потужність</div>
-            </div>
-            <div class="result-item">
-              <div class="result-val" id="rCost">—</div>
-              <div class="result-lab">Орієнтовна вартість</div>
-            </div>
-            <div class="result-item">
-              <div class="result-val" id="rSavings">—</div>
-              <div class="result-lab">Економія за рік</div>
-            </div>
-            <div class="result-item">
-              <div class="result-val" id="rPayback">—</div>
-              <div class="result-lab">Термін окупності</div>
-            </div>
-          </div>
-          <a href="#contact" class="btn-primary" style="width:100%; justify-content:center; margin-top:1rem; display:flex;">
-            Отримати точний розрахунок →
-          </a>
-        </div>
       </div>
     </div>
   </div>
